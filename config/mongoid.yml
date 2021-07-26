@@ -1,0 +1,13 @@
+development:
+  clients:
+    default:
+      database: catfacts
+      hosts:
+      - localhost:27017
+      options:
+        server_selection_timeout: 1
+
+production:
+  clients:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
