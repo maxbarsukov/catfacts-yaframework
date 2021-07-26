@@ -1,0 +1,9 @@
+# Ignore IDE files
+/.idea/*
+/.vscode/*
+
+# Ignore bundler config.
+/.bundle
+
+.byebug_history
+db/mongod.lock
