@@ -1,0 +1,21 @@
+<h3 class="pb-2">There are <b class="text-success"><%= @number %></b> fun facts about cats!</h3>
+
+<% if @alert %>
+  <div class="alert alert-success" role="alert">
+    <%= @alert %>
+  </div>
+<% end %>
+
+<% @facts.each_with_index do |fact, index| %>
+  <p><b><%= index + 1%></b>: <%= fact %><br/></p>
+<% end %>
+
+<div class="pt-4">
+  <div class="raw">
+    <a href="/"><span class="btn btn-outline-secondary">Home</span></a>
+    <a href="/random_cat_fact/<%= @number %>"><span class="btn btn-secondary mr-4">Update facts!</span></a>
+
+    <a href="/random_cat_fact/<%= @number - 1 %>"><span class="btn btn-outline-success">Fewer facts</span></a>
+    <a href="/random_cat_fact/<%= @number + 1 %>"><span class="btn btn-success">More facts!</span></a>
+  </div>
+</div>
